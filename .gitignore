@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+data/
+artifacts/
+.env
+.DS_Store
+*ACCESS*.json
+*token*
+*.zip

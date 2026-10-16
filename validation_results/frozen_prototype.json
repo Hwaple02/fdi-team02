@@ -1,0 +1,74 @@
+{
+  "coefficients": {
+    "intercept": 0.5006946526547178,
+    "momentum_rank": 0.026926522927035495,
+    "size_rank": 7.489564021367556e-05
+  },
+  "config": {
+    "expected_stock_count": 1086,
+    "momentum": {
+      "confirmed_by_user": "2026-10-17",
+      "definition": "입력월 t의 t-12~t-2, 11개월. 예측월 m=t+1 기준 m-13~m-3.",
+      "end_lag_from_target_month": 3,
+      "start_lag_from_target_month": 13,
+      "status": "confirmed"
+    },
+    "target": "next_month_return_percentile_rank",
+    "validation_folds_by_target_month": [
+      {
+        "train": [
+          "2001-01",
+          "2012-12"
+        ],
+        "validation": [
+          "2013-01",
+          "2015-12"
+        ]
+      },
+      {
+        "train": [
+          "2001-01",
+          "2015-12"
+        ],
+        "validation": [
+          "2016-01",
+          "2018-12"
+        ]
+      },
+      {
+        "train": [
+          "2001-01",
+          "2018-12"
+        ],
+        "validation": [
+          "2019-01",
+          "2021-12"
+        ]
+      }
+    ]
+  },
+  "features": [
+    "size_rank",
+    "momentum_rank"
+  ],
+  "input_hashes": {
+    "train_2001_2021__adjusted_monthly_return.csv": "05363d8d3c7ff13e228749a292b6d3eac08696b82fde83ca34ec65ce202b8c2e",
+    "train_2001_2021__company_name.csv": "c771ae10620656f601b93b30f7fe5ab64086f095a421ae28d58863cb3af8866a",
+    "train_2001_2021__isin.csv": "898cabe035d3f41f46fbaa639f05b13c07c7153ed667560061ba07051305518d",
+    "train_2001_2021__raw_month_end_market_cap.csv": "dc31841022934bfea20e249d2d15e489a8dc8751a4c8889bed4a2f7f1cf80cc3",
+    "train_2001_2021__raw_month_end_price.csv": "2dbd231e82f4bf24599b21171b4c977595c70b80f1b51c1df91ae49d613285c2",
+    "train_2001_2021__raw_month_end_shares_outstanding.csv": "c71d8aabd60016704daf55f7f1fb9c7edbd29dc8f0148ab846b586979156a5a0",
+    "warmup_2000__adjusted_monthly_return.csv": "8a6e56aa15eb8afa5530340592080c6971444386d48e027f6661678200d7025f",
+    "warmup_2000__company_name.csv": "45a5df266fb105d24e94ec49f3ccbc34f5d15b05e6c17302a103d633e8e299e4",
+    "warmup_2000__isin.csv": "4b73f30055e33a7ff03cbc58579030ea0d07d2c0bd24eb8ff819d34ef422abc2",
+    "warmup_2000__raw_month_end_market_cap.csv": "149435e414ca09bdc02b89b81fd30f0d2577fd617858b717ffe6b2ad36d9211b",
+    "warmup_2000__raw_month_end_price.csv": "80dfdd1dda982a7ad0b3bbd4e09ff1a0d1bbd0684aa1f3d4d603e7ca9c4ff808",
+    "warmup_2000__raw_month_end_shares_outstanding.csv": "409672f4f54fe556d9a5e4bd0e9c80a420de466ae3e9b5439113e9eaa6383dce"
+  },
+  "n_fit_months": 250,
+  "prototype_only": true,
+  "training_target_months": [
+    "2001-01",
+    "2021-12"
+  ]
+}

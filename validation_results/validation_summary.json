@@ -1,0 +1,68 @@
+{
+  "model": "FM size + momentum prototype",
+  "features": [
+    "size_rank",
+    "momentum_rank"
+  ],
+  "momentum": {
+    "status": "confirmed",
+    "start_lag_from_target_month": 13,
+    "end_lag_from_target_month": 3,
+    "definition": "입력월 t의 t-12~t-2, 11개월. 예측월 m=t+1 기준 m-13~m-3.",
+    "confirmed_by_user": "2026-10-17"
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "train": [
+        "2001-01",
+        "2012-12"
+      ],
+      "validation": [
+        "2013-01",
+        "2015-12"
+      ],
+      "fit_months": 142,
+      "skipped_fit_months": 2,
+      "valid_ic_months": 36,
+      "mean_ic": 0.01884905739173952,
+      "positive_ic_fraction": 0.6666666666666666
+    },
+    {
+      "fold": 2,
+      "train": [
+        "2001-01",
+        "2015-12"
+      ],
+      "validation": [
+        "2016-01",
+        "2018-12"
+      ],
+      "fit_months": 178,
+      "skipped_fit_months": 2,
+      "valid_ic_months": 36,
+      "mean_ic": -0.010047269239303826,
+      "positive_ic_fraction": 0.4722222222222222
+    },
+    {
+      "fold": 3,
+      "train": [
+        "2001-01",
+        "2018-12"
+      ],
+      "validation": [
+        "2019-01",
+        "2021-12"
+      ],
+      "fit_months": 214,
+      "skipped_fit_months": 2,
+      "valid_ic_months": 36,
+      "mean_ic": -0.023468620924535576,
+      "positive_ic_fraction": 0.5
+    }
+  ],
+  "overall_mean_ic": -0.00488894425736663,
+  "valid_ic_months": 108,
+  "test_evaluated": false,
+  "note": "학습기간 내부 검증 결과. 최종 모델 또는 텍스트 추가 효과의 검증 결과가 아님."
+}

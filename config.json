@@ -1,0 +1,16 @@
+{
+  "expected_stock_count": 1086,
+  "momentum": {
+    "status": "confirmed",
+    "start_lag_from_target_month": 13,
+    "end_lag_from_target_month": 3,
+    "definition": "입력월 t의 t-12~t-2, 11개월. 예측월 m=t+1 기준 m-13~m-3.",
+    "confirmed_by_user": "2026-10-17"
+  },
+  "target": "next_month_return_percentile_rank",
+  "validation_folds_by_target_month": [
+    {"train": ["2001-01", "2012-12"], "validation": ["2013-01", "2015-12"]},
+    {"train": ["2001-01", "2015-12"], "validation": ["2016-01", "2018-12"]},
+    {"train": ["2001-01", "2018-12"], "validation": ["2019-01", "2021-12"]}
+  ]
+}
